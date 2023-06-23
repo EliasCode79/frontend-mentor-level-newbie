@@ -1,0 +1,121 @@
+/* es para q no with de un elemento no se incremente cuando agregamos un padding */
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; /* hack, con esto logramos con 1REM = 10px */
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Lexend Deca', sans-serif;
+	font-size: 1.5rem;
+	line-height: 2;
+}
+
+/* Globales */
+:root {
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+	--transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+	--very-light-gray-background: hsl(0, 0%, 95%);
+}
+h1,
+h2,
+h3 {
+	font-family: 'Big Shoulders Display', cursive;
+	margin: 2rem 0 2rem 0;
+}
+h1 {
+	font-size: 5rem;
+}
+h2 {
+	font-size: 4rem;
+}
+h3 {
+	font-size: 3rem;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.container {
+	max-width: 144rem;
+	margin: 0 auto;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.btn {
+	background-color: var(--very-light-gray-background);
+	display: block;
+	font-weight: 900;
+	padding: 1rem;
+	transition: background-color 0.3s ease-out;
+	text-align: center;
+	border: none;
+	border-radius: 2.8rem;
+	padding: 1.5rem 3rem;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+/* Utilidades */
+.text-center {
+	text-align: center;
+}
+
+/* .max-width-30 {
+	max-width: 30rem;
+} */
+
+.container-column {
+	margin: 4rem auto;
+	display: flex;
+	width: 90rem;
+}
+.box-car {
+	height: 50rem;
+	padding: 5rem;
+	color: var(--transparent-white-paragraphs);
+}
+.box-car h2 {
+	text-transform: uppercase;
+}
+
+.box-car p {
+	height: 20rem;
+}
+.container-column .box-car:nth-child(1) {
+	background-color: var(--bright-orange);
+	border-top-left-radius: 1.2rem;
+	border-bottom-left-radius: 1.2rem;
+}
+.container-column .box-car:nth-child(2) {
+	background-color: var(--dark-cyan);
+}
+.container-column .box-car:nth-child(3) {
+	background-color: var(--very-dark-cyan);
+	border-top-right-radius: 1.2rem;
+	border-bottom-right-radius: 1.2rem;
+}
+
+.box-car:nth-child(1) .btn {
+	color: var(--bright-orange);
+}
+.box-car:nth-child(2) .btn {
+	color: var(--dark-cyan);
+}
+.box-car:nth-child(3) .btn {
+	color: var(--very-dark-cyan);
+}
