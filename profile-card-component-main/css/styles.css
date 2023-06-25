@@ -80,10 +80,16 @@ img {
 
 .contenedor {
 	max-width: 144rem;
+	height: 100rem;
 	display: flex;
 	margin: 0 auto;
 	justify-content: center;
+	align-items: center;
 	font-family: 'Kumbh Sans', sans-serif;
+	background-image: url('../images/bg-pattern-top.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	/* align-content: center; */
 }
 
@@ -91,6 +97,7 @@ img {
 	width: 50rem;
 	border-radius: 2rem;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	background-color: #fff;
 }
 
 .fondo {
@@ -141,8 +148,8 @@ img {
 	font-size: 3.2rem;
 }
 
-.info :not(.numbers) {
-	letter-spacing: 3px;
+.info :not(span) {
+	letter-spacing: 2px;
 	text-align: center;
 }
 
