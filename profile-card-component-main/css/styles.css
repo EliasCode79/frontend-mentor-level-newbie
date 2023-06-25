@@ -1,0 +1,157 @@
+/* es para q no with de un elemento no se incremente cuando agregamos un padding */
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; /* hack, con esto logramos con 1REM = 10px */
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 1.5rem;
+	line-height: 2;
+}
+
+/* Globales */
+:root {
+	--dark-cyan: hsl(185, 75%, 39%);
+	--very-dark-desaturated-blue: hsl(229, 23%, 23%);
+	--dark-grayish-blue: hsl(227, 10%, 46%);
+	--dark-gray: hsl(0, 0%, 59%);
+}
+h1,
+h2,
+h3 {
+	font-family: 'Kumbh Sans', sans-serif;
+	margin: 2rem 0 2rem 0;
+}
+h1 {
+	font-size: 5rem;
+}
+h2 {
+	font-size: 4rem;
+}
+h3 {
+	font-size: 3rem;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+.container {
+	max-width: 144rem;
+	margin: 0 auto;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+.btn {
+	background-color: var(--very-light-gray-background);
+	display: block;
+	font-weight: 900;
+	padding: 1rem;
+	transition: background-color 0.3s ease-out;
+	text-align: center;
+	border: none;
+	border-radius: 2.8rem;
+	padding: 1.5rem 3rem;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+/* Utilidades */
+.text-center {
+	text-align: center;
+}
+
+/* .max-width-30 {
+	max-width: 30rem;
+} */
+
+.contenedor {
+	max-width: 144rem;
+	display: flex;
+	margin: 0 auto;
+	justify-content: center;
+	font-family: 'Kumbh Sans', sans-serif;
+	/* align-content: center; */
+}
+
+.card {
+	width: 50rem;
+	border-radius: 2rem;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.fondo {
+	height: 20rem;
+	background-image: url('../images/bg-pattern-card.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-top-left-radius: 2rem;
+	border-top-right-radius: 2rem;
+}
+
+.nombre-pais {
+	text-align: center;
+}
+
+.nombre-pais h2,
+.edad {
+	color: var(--very-dark-desaturated-blue);
+	font-weight: 700;
+	font-size: 3.2rem;
+	display: inline-block;
+}
+
+.nombre-pais .edad {
+	font-weight: 400;
+	color: var(--dark-grayish-blue);
+}
+
+.nombre-pais h3 {
+	color: var(--dark-grayish-blue);
+	font-size: 2.4rem;
+	margin: 1rem;
+	font-weight: 400;
+}
+
+.info {
+	display: flex;
+	justify-content: space-around;
+	border-top: 1px solid var(--dark-gray);
+}
+
+.numbers {
+	text-align: center;
+	color: var(--very-dark-desaturated-blue);
+	display: block;
+	font-weight: 700;
+	font-size: 3.2rem;
+}
+
+.info :not(.numbers) {
+	letter-spacing: 3px;
+	text-align: center;
+}
+
+.imagen {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.imagen img {
+	border-radius: 50%;
+	border: 0.5rem solid #000;
+}
